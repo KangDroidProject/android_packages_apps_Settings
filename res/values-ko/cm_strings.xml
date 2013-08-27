@@ -1001,4 +1001,6 @@
   <string name="no_wifi_triggers">사용 가능한 Wi\u2011Fi 트리거 없음</string>
   <string name="profile_setup_setup_triggers_description">이 프로필을 활성화할 트리거를 선택해주십시오</string>
   <string name="profile_setup_actions_description">이 프로필이 활성화되면 무엇을 할 것인지 설정해주십시오</string>
+    <!-- ListView animation -->
+    <string name="listview_category">리스트뷰 애니메이션</string>
 </resources>

@@ -130,6 +130,7 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.WifiEnabler;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.cyanogenmod.KangDroidSettings;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -206,9 +207,6 @@ public class Settings extends PreferenceActivity
             R.id.nfc_payment_settings,
             R.id.home_settings,
             R.id.interface_section,
-            R.id.status_bar_settings,
-            R.id.notification_bar_settings,
-            R.id.lock_screen_settings,
             R.id.privacy_settings_cyanogenmod,
             R.id.button_settings
     };
@@ -486,6 +484,7 @@ public class Settings extends PreferenceActivity
         StatusBar.class.getName(),
         NotificationDrawer.class.getName(),
         ButtonSettings.class.getName(),
+	KangDroidSettings.class.getName(),
         ProfilesSettings.class.getName(),
         PerformanceSettings.class.getName(),
         PolicyNativeFragment.class.getName(),
@@ -1267,18 +1266,6 @@ public class Settings extends PreferenceActivity
         boolean revert = false;
         if (header.id == R.id.account_add) {
             revert = true;
-        }
-
-        // Launch the theme chooser if it supports the cyngn.intent.category.APP_THEMES category.
-        if (header.id == R.id.theme_settings) {
-            Intent intent = new Intent(Intent.ACTION_MAIN)
-                    .addCategory(THEME_CHOOSER_CATEGORY);
-            try {
-                startActivity(intent);
-                return;
-            } catch (ActivityNotFoundException e) {
-                // do nothing so the theme settings to be displayed
-            }
         }
 
         super.onHeaderClick(header, position);
