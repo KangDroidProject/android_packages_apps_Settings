@@ -20,19 +20,14 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:key="status_bar_category"
-        android:title="@string/status_bar_title" >
+        android:key="cm_default_customization"
+        android:title="@string/cm_default_customization_title" >
 
     <!-- Lock screen -->
     <PreferenceScreen
         android:key="lock_screen_settings"
         android:fragment="com.android.settings.cyanogenmod.LockscreenInterface"
         android:title="@string/lock_screen_title" />
-
-     <PreferenceScreen
-                android:key="listview"
-                android:fragment="com.android.settings.cyanogenmod.Listview"
-                android:title="@string/listview_category" />
 
     <!-- Themes -->
     <PreferenceScreen
@@ -53,6 +48,25 @@
         android:fragment="com.android.settings.cyanogenmod.NotificationDrawer"
         android:title="@string/notification_drawer_title" />
 
-    </PreferenceCategory>
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="kdp_customization"
+        android:title="@string/kdp_customization_title" >
+
+    <!-- List View -->
+     <PreferenceScreen
+        android:key="listview"
+        android:fragment="com.android.settings.cyanogenmod.Listview"
+        android:title="@string/listview_category" />
+
+    <!-- HALO -->
+    <PreferenceScreen
+        android:id="@+id/halo_settings"
+        android:fragment="com.android.settings.cyanogenmod.Halo"
+        android:title="@string/halo_settings_title" />
+
+	</PreferenceCategory>
+
 </PreferenceScreen>
 
